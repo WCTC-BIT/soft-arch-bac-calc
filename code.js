@@ -1,7 +1,5 @@
-$(function() {
-    $("body").on("submit", "form", function (event) {
-        event.preventDefault();
-
+$(function () {
+    $("body").on("click", "button", function () {
         let beer = Number($("input#beer").val());
         let wine = Number($("input#wine").val());
         let liquor = Number($("input#liquor").val());
@@ -18,7 +16,6 @@ $(function() {
 
         $("input#danger").val(bac);
     });
-});
-
+})
 
 

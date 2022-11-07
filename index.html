@@ -23,7 +23,8 @@
         }
     </style>
     <!-- jQuery first -->
-    <script defer src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
             crossorigin="anonymous"></script>
     <!-- Our code second -->
     <script defer src="code.js"></script>
@@ -34,36 +35,34 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col">
-                <h1>Stacy's BAC Calculator</h1>
+                <h1>BAC Calculator</h1>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <form>
-                    <div class="mb-3">
-                        <label for="weight" class="form-label">Weight (Pounds)</label>
-                        <input type="number" class="form-control" id="weight" name="weight" min="60" max="600" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="beer" class="form-label">Number of Beers Consumed</label>
-                        <input type="number" class="form-control" id="beer" name="beer" min="0" max="20" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="wine" class="form-label">Glasses of Wine Consumed</label>
-                        <input type="number" class="form-control" id="wine" name="wine" min="0" max="20" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="liquor" class="form-label">Ounces of Liquor Consumed</label>
-                        <input type="number" class="form-control" id="liquor" name="liquor" min="0" max="20" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="hours" class="form-label">Hours Since First Drink</label>
-                        <input type="number" class="form-control" id="hours" name="hours" min="0" max="24" required>
-                    </div>
-                    <div class="mb-3">
-                        <button class="btn btn-primary">Calculate</button>
-                    </div>
-                </form>
+                <div class="mb-3">
+                    <label for="weight" class="form-label">Weight (Pounds)</label>
+                    <input type="number" class="form-control" id="weight" name="weight" min="60" max="600" required>
+                </div>
+                <div class="mb-3">
+                    <label for="beer" class="form-label">Number of Beers Consumed</label>
+                    <input type="number" class="form-control" id="beer" name="beer" min="0" max="20" required>
+                </div>
+                <div class="mb-3">
+                    <label for="wine" class="form-label">Glasses of Wine Consumed</label>
+                    <input type="number" class="form-control" id="wine" name="wine" min="0" max="20" required>
+                </div>
+                <div class="mb-3">
+                    <label for="liquor" class="form-label">Ounces of Liquor Consumed</label>
+                    <input type="number" class="form-control" id="liquor" name="liquor" min="0" max="20" required>
+                </div>
+                <div class="mb-3">
+                    <label for="hours" class="form-label">Hours Since First Drink</label>
+                    <input type="number" class="form-control" id="hours" name="hours" min="0" max="24" required>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary">Calculate</button>
+                </div>
             </div>
         </div>
         <div class="row">

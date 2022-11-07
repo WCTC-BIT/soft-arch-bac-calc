@@ -1,18 +1,18 @@
 // "describe" creates a test suite, a group of test
-// cases for a specific functionality: submitting,
-// the form, in this case. The first argument
+// cases for a specific functionality: clicking the
+// Calculate button, in this case. The first argument
 // is the name of the test suite.
-describe("submitting the form", function() {
-    let form, weightField, beerField, wineField, liquorField,
-        hoursField, output, slider;
+describe("clicking the Calculate button", function() {
+    let weightField, beerField, wineField, liquorField,
+        hoursField, calcButton, output, slider;
 
     beforeAll(function() {
-        form = $("<form>").appendTo("body");
-        weightField = $('<input type="number" class="form-control" id="weight" name="weight" min="60" max="600" required>').appendTo(form);
-        beerField = $('<input type="number" class="form-control" id="beer" name="beer" min="0" max="20" required>').appendTo(form);
-        wineField = $('<input type="number" class="form-control" id="wine" name="wine" min="0" max="20" required>').appendTo(form);
-        liquorField = $('<input type="number" class="form-control" id="liquor" name="liquor" min="0" max="20" required>').appendTo(form);
-        hoursField = $('<input type="number" class="form-control" id="hours" name="hours" min="0" max="24" required>').appendTo(form);
+        weightField = $('<input type="number" class="form-control" id="weight" name="weight" min="60" max="600" required>').appendTo("body");
+        beerField = $('<input type="number" class="form-control" id="beer" name="beer" min="0" max="20" required>').appendTo("body");
+        wineField = $('<input type="number" class="form-control" id="wine" name="wine" min="0" max="20" required>').appendTo("body");
+        liquorField = $('<input type="number" class="form-control" id="liquor" name="liquor" min="0" max="20" required>').appendTo("body");
+        hoursField = $('<input type="number" class="form-control" id="hours" name="hours" min="0" max="24" required>').appendTo("body");
+        calcButton = $('<button class="btn btn-primary">Calculate</button>').appendTo("body")
         output = $('<p id="output"></p>').appendTo("body");
         slider = $('<input type="range" min="0" max="0.5" step="0.01" value="0" name="danger" id="danger">').appendTo("body");
     });
@@ -26,7 +26,7 @@ describe("submitting the form", function() {
         liquorField.val("0");
         hoursField.val("1");
 
-        form.submit();
+        calcButton.click();
         expect(output.text()).toEqual("Your BAC is 0.039");
         expect(slider.val()).toEqual("0.04");
     });
@@ -38,7 +38,7 @@ describe("submitting the form", function() {
         liquorField.val("0");
         hoursField.val("2");
 
-        form.submit();
+        calcButton.click();
         expect(output.text()).toEqual("Your BAC is 0.078");
         expect(slider.val()).toEqual("0.08");
     });
