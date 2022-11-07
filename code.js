@@ -16,6 +16,6 @@ $(function () {
 
         $("input#danger").val(bac);
     });
-})
+});
 
 
