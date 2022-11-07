@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Styles the <div> that contains the slider */
+        div#bac-graphic {
+            background-image: url("bac-symptoms.png");
+            width: 1000px;
+            height: 319px;
+            position: relative;
+        }
+
+        /* Styles the slider inside the <div> */
+        input[type=range] {
+            width: 800px;
+            left: 25px;
+            top: 163px;
+            position: absolute;
+        }
+    </style>
+    <!-- jQuery first -->
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+    <!-- Our code second -->
+    <script defer src="code.js"></script>
+    <title>BAC Calculator</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <h1>Stacy's BAC Calculator</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="mb-3">
+                        <label for="weight" class="form-label">Weight (Pounds)</label>
+                        <input type="number" class="form-control" id="weight" name="weight" min="60" max="600" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="beer" class="form-label">Number of Beers Consumed</label>
+                        <input type="number" class="form-control" id="beer" name="beer" min="0" max="20" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="wine" class="form-label">Glasses of Wine Consumed</label>
+                        <input type="number" class="form-control" id="wine" name="wine" min="0" max="20" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="liquor" class="form-label">Ounces of Liquor Consumed</label>
+                        <input type="number" class="form-control" id="liquor" name="liquor" min="0" max="20" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="hours" class="form-label">Hours Since First Drink</label>
+                        <input type="number" class="form-control" id="hours" name="hours" min="0" max="24" required>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary">Calculate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p id="output"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="bac-graphic">
+                    <input type="range" min="0" max="0.5" step="0.01" value="0" name="danger" id="danger">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <footer>Image adapted from <a href="https://www.afterdrink.com/stages-of-being-drunk/">https://www.afterdrink.com/stages-of-being-drunk/</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
